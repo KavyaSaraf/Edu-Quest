@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { SignedIn, SignedOut, useAuth } from '@clerk/nextjs';
-import { ModeToggle } from "@/components/mode-toggle";
 
 export default function LandingPage() {
   const router = useRouter();
@@ -33,17 +32,14 @@ export default function LandingPage() {
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/ai-tutor">
             AI Tutor
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/analytics">
-            Analytics
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/ai-roadmap">
+            AI Roadmap
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/ai-learning-path">
-            Learning Path
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/ai-path">
+            AI Path
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/collaborative">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="https://collabzz.vercel.app/">
             Collaborative
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/dashboard/features/feedback">
-            Feedback
           </Link>
         </nav>
       </header>
@@ -60,9 +56,8 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button onClick={() => router.push('/dashboard')}>Get Started</Button>
-                <Button variant="outline">Learn More</Button>
-                {/* <ModeToggle /> */}
+<Button onClick={() => router.push('/dashboard/features/ai-roadmap')}>Get Started</Button>
+<Button variant="outline" onClick={() => router.push('/learn-more')}>Learn More</Button>
               </div>
             </div>
           </div>

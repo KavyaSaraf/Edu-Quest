@@ -38,14 +38,15 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       > */}
-        <html lang="en" suppressHydrationWarning>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
-            {children}
-          </body>
-          <DynamicMyWidget />
-        </html>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {/* <Toaster /> */}
+          {children}
+        </body>
+        <DynamicMyWidget />
+      </html>
       {/* </ThemeProvider> */}
     </ClerkProvider>
   );
