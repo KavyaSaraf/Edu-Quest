@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Brain, Users, MessageSquare, LineChart, Zap, BookOpen, Target, Award } from 'lucide-react'
+import { Brain, Users, MessageSquare, LineChart, Zap, BookOpen, Target, Award, ClipboardList } from 'lucide-react'
 
 export default function DashboardPage() {
   return (
@@ -130,6 +130,27 @@ export default function DashboardPage() {
                 </CardContent>
               </Card>
               
+              <Card>
+                <CardHeader className="flex flex-row items-center space-x-4">
+                  <ClipboardList className="h-8 w-8" />
+                  <div>
+                    <CardTitle>Career Quiz</CardTitle>
+                    <CardDescription>Discover your ideal career path</CardDescription>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm">Take the quiz to find:</span>
+                      <span className="text-sm text-muted-foreground">Your career match</span>
+                    </div>
+                    <Button className="w-full" asChild>
+                      <a href="/dashboard/features/career-quiz">Start Career Quiz</a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
               <Card>
                 <CardHeader className="flex flex-row items-center space-x-4">
                   <MessageSquare className="h-8 w-8" />
